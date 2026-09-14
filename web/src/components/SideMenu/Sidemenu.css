@@ -1,4 +1,5 @@
 .sidemenu{
+  flex-shrink: 0;
   width: 260px;
   padding:10px;
   /* border:1px solid white; */
@@ -6,11 +7,17 @@
 }
 
 .sidemenu-button{
+  width: 100%;
   padding: 15px;
+  background: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   /* border:1px solid white; */
   border-radius: 5px;
   text-align: left;
-  transition: ease 0.25 all;
+  transition: ease 0.25s all;
 }
 
 .sidemenu-button:hover{
