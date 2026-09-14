@@ -14,7 +14,7 @@
 
 # ⚔️ Proposed Challenge
 
-Create a api integration with openIA text completion  **(ChatGPT)** with Node.
+Create an api integration with LLM chat completion via **OpenRouter** with Node.
 
 
 ```
@@ -34,7 +34,7 @@ This code source was developed with the following technologies:
 
 ### 📚 Libs & Dependencys
 
-- [openAI](https://npmjs.com/package/openai) - To integrate with openAI Algorhitms
+- [OpenRouter](https://openrouter.ai/docs) - Unified API to access many LLMs (via native fetch)
 - [express](https://.npmjs.com/package/express) - For create rest apis with more
 - [cors](https://.npmjs.com/package/cors) - Control access to api requests/resources
 - [dotenv](https://.npmjs.com/package/dotenv) - Configuration custom file
@@ -61,7 +61,7 @@ $ npm install
 # Run (development ambient)
 $ npm run dev
 ```
-* to use openai lib
+* to use OpenRouter
 ```bash
-The library needs to be configured with your account's secret key, which is available on the website. Setting API key as an environment variable in .env. before run
+Create an API key at https://openrouter.ai/keys and set OPENROUTER_API_KEY in .env before run. Optionally set OPENROUTER_MODEL (e.g. anthropic/claude-sonnet-4, openai/gpt-4o-mini).
 ```

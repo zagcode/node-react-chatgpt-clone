@@ -1,20 +1,17 @@
 const inputPrompt = require("../models/input-prompt")
-const openai = require("../config/openai")
+const openrouter = require("../config/openrouter")
 
 module.exports = {
 	async sendText(req, res){
 
-		const openaiAPI = openai.configuration()
 		const inputModel = new inputPrompt(req.body)
 
 		try {
-			const response = await openaiAPI.createCompletion(
-				openai.textCompletion(inputModel)
-			)
+			const text = await openrouter.chatCompletion(inputModel)
 
 			return res.status(200).json({
 				sucess: true,
-				data: response.data.choices[0].text
+				data: text
 			})
 
 		} catch (error) {
